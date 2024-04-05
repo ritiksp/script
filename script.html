@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Element Interaction Logger</title>
+</head>
+<body>
+
+<!-- Example HTML elements -->
+<button>Button 1</button>
+<button>Button 2</button>
+<input type="text" id="fname" name="fname"><br>
+<div>Div 1</div>
+<div>Div 2</div>
+<img src="https://compote.slate.com/images/697b023b-64a5-49a0-8059-27b963453fb1.gif" width="100%">
+<a href="#">Click here</a>
+<script>
+// Function to log the name of the clicked HTML element
+function logElementName(event) {
+    console.log("Clicked element:", event.target.tagName);
+}
+
+// Add click event listener to the document body
+document.body.addEventListener('click', logElementName);
+
+function logKeyPressed(event) {
+    console.log("Pressed key:", event.key);
+}
+
+// Add keydown event listener to the document body
+document.body.addEventListener('keydown', logKeyPressed);
+</script>
+
+</body>
+</html>
